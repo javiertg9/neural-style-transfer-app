@@ -57,7 +57,7 @@ Its configuration relies on the parameters for performing NST that are located a
 - number of **iterations** of the optimization process,
 - and checkbox to **save** or not the resulting stylized image.
 
-https://user-images.githubusercontent.com/71815905/152897543-2d227393-50a8-4daf-90bc-69c7bd31b369.mp4
+https://user-images.githubusercontent.com/71815905/153066914-ee70eb2a-9bd6-4183-b7f9-83b61444c132.mp4
 
 ### 2) Running the script
 

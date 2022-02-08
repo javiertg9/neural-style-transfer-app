@@ -153,13 +153,10 @@ def neural_style_transfer(cfg, device):
     content_img = transform(cfg["content_img"]).to(device)
     style_img = transform(cfg["style_img"]).to(device)
         
-    # create initial image as gaussian noise. It makes sense to use this type
-    # of noise because the error (im - gound-truth) \sim N this way -> hence
-    # minimizing the previous squared error leads to a maximum likelihood
-    # estimate:
+    # create initial image as gaussian noise. As a sidenote, the last 
+    # operation is the in-place method requires_grad_() in order to keep 
+    # optimizing_img as a leaf variable:
     optimizing_img = (90*torch.randn(content_img.shape).to(device)).requires_grad_()
-    # as a sidenote, the last operation is the in-place method requires_grad_()
-    # in order to keep optimizing_img as a leaf variable.
     
     # get model and ground-truth data:
     if cfg['model'].lower()=='vgg19':        
